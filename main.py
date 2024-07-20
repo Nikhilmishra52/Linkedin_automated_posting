@@ -152,7 +152,7 @@ def post_to_feed(driver,file_to_post):
     except Exception as e:
         print("error postng files: ",e)
 
-schedule.every(2).minutes.do(functools.partial( post_to_feed,driver,file_to_post))
+schedule.every(1).hours.do(functools.partial( post_to_feed,driver,file_to_post))
 
 
 if __name__=="__main__":
